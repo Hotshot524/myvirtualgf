@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 from flask_migrate import Migrate
 from dotenv import load_dotenv
+from waitress import serve
 
 # Load environment variables
 load_dotenv()
@@ -129,5 +130,5 @@ def stripe_webhook():
 with app.app_context():
     db.create_all()
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    serve(app, host="0.0.0.0", port=10000)
