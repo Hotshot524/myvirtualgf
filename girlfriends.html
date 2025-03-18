@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Girlfriends</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('girlfriends') }}">Virtual Girlfriends</a>
+        <a href="{{ url_for('subscribe') }}">Subscriptions</a>
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+    </div>
+
+    <div class="container">
+        <h1>Choose Your Virtual Girlfriend 💕</h1>
+        
+        <div class="girlfriend-card">
+            <img src="{{ url_for('static', filename='images/gaby1.jpg') }}" width="300">
+            <h2>Gaby</h2>
+            <p>Your affectionate AI companion.</p>
+            <a href="{{ url_for('subscribe') }}" class="button">Subscribe to Chat</a>
+        </div>
+    </div>
+
+</body>
+</html>
